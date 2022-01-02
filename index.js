@@ -21,6 +21,10 @@ db.once("open", () => {
 app.use(express.json());
 app.use("/api", routes);
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.use(errorHandler);
 app.listen(APP_PORT, () => {
   console.log(`Listening on port ${APP_PORT}`);
