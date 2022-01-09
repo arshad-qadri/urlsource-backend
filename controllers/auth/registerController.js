@@ -2,7 +2,6 @@ import Joi from "joi";
 import User from "../../models/user";
 import CustomeErrorHandler from "../../services/CustomeErrorHandler";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
 import JwtService from "../../services/JwtService";
 import { REFRESH_SECRET } from "../../config";
 import RefreshToken from "../../models/refreshToken";
