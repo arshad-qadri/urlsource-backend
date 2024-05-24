@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 import { APP_PORT, DB_URL } from "./config";
 import errorHandler from "./middlewares/errorHandler";
 import routes from "./routes";
+import cors from "cors"
 
 const app = express();
 
@@ -20,6 +21,7 @@ db.once("open", () => {
 
 app.use(express.json());
 app.use("/api", routes);
+app.use(cors())
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
