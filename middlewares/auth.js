@@ -10,7 +10,7 @@ const auth = async (req, res, next) => {
   const token = authHeader.split(" ")[1];
 
   try {
-    const token_data = await JwtService.verify(token);
+    const token_data =  JwtService.verify(token);
     const user = {
       _id: token_data._id,
       private: token_data.private,

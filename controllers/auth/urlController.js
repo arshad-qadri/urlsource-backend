@@ -73,7 +73,7 @@ const urlController = {
   },
 
   async findAll(req, res, next) {
-    await UrlSource.find()
+    await UrlSource.find({userId:req.user._id})
       .then(data => {
         res.send(data);
       })
