@@ -8,7 +8,7 @@ const urlSchema = new Schema(
     title: { type: String, required: true },
     url: { type: String, required: true },
   },
-  { timestamp: true }
+  { timestamps: true }
 );
 
 export default mongoose.model("UrlSource", urlSchema, "urlSources");
